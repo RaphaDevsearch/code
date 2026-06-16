@@ -32,19 +32,17 @@ double bisection(double a, double b){
 double bisection_loop(double a, double b){
   double m = mean(a,b);
 
-
-  while (fabs(a-b)>EPS){
-
+  while (fabs(a-b) > EPS)
+  {
     m = mean(a,b);
-    if(f(a) * f(m) < 0) { b = m;}
-    else                { a = m;}
+
+    if(f(a) * f(m) < 0) {b = m;}
+    else                {a = m;}
   }
   
 
   return m;
 }
-
-
 
 void display_result(double slt){
   char *msg = "Solution :";
